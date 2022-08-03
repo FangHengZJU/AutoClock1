@@ -110,7 +110,7 @@ class AutoDaka:
             inSchoolYes.click()
             Campus=driver.find_element(by=By.NAME,value="campus")
             CampusOption=Campus.find_element(by=By.TAG_NAME, value="div").find_elements(by=By.TAG_NAME, value="div")
-            CampusYuquan=WebDriverWait(driver, 10).until(EC.element_to_be_clickable(CampusOption[1]))
+            CampusYuquan=WebDriverWait(driver, 10).until(EC.element_to_be_clickable(CampusOption[8]))
             CampusYuquan.click()
             
         except Exception as error:
@@ -122,7 +122,7 @@ class AutoDaka:
         try:
             internship=driver.find_element(by=By.NAME,value="internship")
             internshipOption=internship.find_element(by=By.TAG_NAME, value="div").find_elements(by=By.TAG_NAME, value="div")
-            internshipNo=WebDriverWait(driver, 10).until(EC.element_to_be_clickable(internshipOption[2]))
+            internshipNo=WebDriverWait(driver, 10).until(EC.element_to_be_clickable(internshipOption[1]))
             internshipNo.click()
             print("实习信息已提交")
         except Exception as error:
